@@ -2,28 +2,25 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-    //Первое задание
-        String text, textOut;
+
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите текст из нескольких слов:");
 
-        text = scanner.nextLine();
+        System.out.println("Введите 1ю из 6 цифр в двоичной системе: ");
+        int binNumber1 = scanner.nextInt();
+        System.out.println("Введите 2ю из 6 цифр в двоичной системе: ");
+        int binNumber2 = scanner.nextInt();
+        System.out.println("Введите 3ю из 6 цифр в двоичной системе: ");
+        int binNumber3 = scanner.nextInt();
+        System.out.println("Введите 4ю из 6 цифр в двоичной системе: ");
+        int binNumber4 = scanner.nextInt();
+        System.out.println("Введите 5ю из 6 цифр в двоичной системе: ");
+        int binNumber5 = scanner.nextInt();
+        System.out.println("Введите 6ю из 6 цифр в двоичной системе: ");
+        int binNumber6 = scanner.nextInt();
 
-        System.out.println("Введите слово которое нужно удалить из текста:");
+        binaryToDecimal binaryToDecimal = new binaryToDecimal(binNumber1, binNumber2, binNumber3, binNumber4, binNumber5, binNumber6);
 
-        textOut = scanner.nextLine();
+        System.out.println(binaryToDecimal.getDecimal());
 
-        text = text.replaceAll(textOut, "");
-        text = text.replaceAll("\\s+"," ");
-
-        System.out.println(text);
-
-        //Второе задание
-        System.out.println(" ");
-
-        String binNumber;
-        System.out.println("Введите введите число из 6 цифр в двоичной системе измерения");
-        binNumber = scanner.nextLine();
-        System.out.println("Это число в десятичной системе = " + Integer.parseInt(binNumber,2));
     }
 }
